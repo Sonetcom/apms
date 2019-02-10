@@ -3,6 +3,7 @@
 Institution class, contains the attributes and names of the class.
 """
 from __future__ import unicode_literals
+from __future__ import print_function
 
 from django.db import models
 from django.urls import reverse
@@ -13,7 +14,9 @@ class Institution(models.Model):
     """
     #inst_name = models.CharField(max_length=200, help="Name of the institution")
     #inst_place = models.CharField(max_length=200, help="Area of the instution")
-    inst_num = models.CharField(max_length=10)
+    inst_id = models.CharField(max_length=10)
+    inst_name = models.CharField(max_length=200)
+    inst = models.CharField(max_length=200)
 
     class Meta:
         """ Order by the institutional Number."""
