@@ -8,5 +8,5 @@ from django.http import HttpResponse
 def index(request):
     return HttpResponse("hello world.")
 
-def institution(request):
+def create(request):
     return HttpResponse("I am institution");
