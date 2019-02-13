@@ -23,7 +23,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'emtkus##bvq_7fl*0j$tuv)u=)e7cbhtr0#er7f1r^wjqm_j$5'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 #ALLOWED_HOSTS = ['http://127.0.0.1:8000']
 ALLOWED_HOSTS = ['*']
@@ -39,7 +39,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'institution',
+    'institution.apps.InstitutionConfig',
+    'reports.apps.ReportsConfig',
+    'web.apps.WebConfig',
     
 ]
 
@@ -121,5 +123,8 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
 
+STATIC_ROOT = os.path.join(BASE_DIR, "static/")
+
 #STATIC_URL = '/static/'
 STATIC_URL = os.path.join(BASE_DIR, "static/")
+

@@ -16,12 +16,12 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 
-#schema_view = get_swagger_view(title='Pastebin API')
 urlpatterns = [
-    #url(r'^$', schema_view),
     path('admin/', admin.site.urls),
     path('users/', include('users.urls')),
+    path('', include('web.urls')),
     path('institution/', include('institution.urls')),
+    path(r'reports/', include('reports.urls')),
     
 ]
 
